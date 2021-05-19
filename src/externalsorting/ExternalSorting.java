@@ -44,8 +44,8 @@ public class ExternalSorting {
 //        String currentDirectory = System.getProperty("user.dir");
 //        System.out.println(currentDirectory);
 
-        String relativePath = "/data/";
-        String inputName = "large_file";
+        String relativePath = "/resources/";
+        String inputName = "large_file.txt";
 
         Path path = Paths.get(System.getProperty("user.dir"), relativePath);
         File inputFile = Paths.get(path.toString(), inputName).toFile();
