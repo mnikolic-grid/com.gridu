@@ -41,9 +41,6 @@ public class ExternalSorting {
 
     public static void main(String[] args) throws IOException {
 
-//        String currentDirectory = System.getProperty("user.dir");
-//        System.out.println(currentDirectory);
-
         String relativePath = "/resources/";
         String inputName = "large_file.txt";
 
