@@ -2,7 +2,6 @@ package threadpool;
 
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.concurrent.TimeUnit;
 
 public class BlockingQueue<Type> {
 
@@ -26,10 +25,9 @@ public class BlockingQueue<Type> {
 
     public synchronized Type dequeue() throws InterruptedException {
 
-        while(this.queue.size() == EMPTY & !this.threadPool.isShutDown)
-            wait(10);
+        while(this.size() == EMPTY & !this.threadPool.isShutDown)
+            wait();
         notify();
-        //System.out.println( this.queue.poll());
         return this.queue.poll();
     }
 

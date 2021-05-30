@@ -1,7 +1,5 @@
 package threadpool;
 
-import java.util.ArrayList;
-
 import static java.lang.Thread.sleep;
 
 public class Main {
@@ -13,7 +11,7 @@ public class Main {
         for(int taskNumber = 1; taskNumber <= 10; taskNumber++){
             Runnable task = () -> {
                 try{
-                    Thread.sleep(10000);
+                    Thread.sleep(1000);
                 } catch (InterruptedException ex){
                     ex.printStackTrace();
                 }

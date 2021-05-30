@@ -1,7 +1,5 @@
 package threadpool;
 
-import java.sql.SQLOutput;
-
 public class TaskExecutor implements Runnable {
     BlockingQueue<Runnable> queue;
     ThreadPool threadPool;
@@ -25,9 +23,6 @@ public class TaskExecutor implements Runnable {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-//        catch (NullPointerException e) {
-//            e.printStackTrace();
-//    }
     }
 
 

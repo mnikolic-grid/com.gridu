@@ -27,7 +27,7 @@ public class ThreadPool {
         this.queue.enqueue(task);
     }
 
-    public void shutdown() throws InterruptedException{
+    public void shutdown() {
         this.isShutDown = true;
     }
 
