@@ -23,7 +23,8 @@ public class ThreadPool {
         }
     }
 
-    public void submitTask(Runnable task) throws InterruptedException{
+    public void submitTask(Runnable task, int timeDelay) throws InterruptedException{
+        Thread.sleep(timeDelay);
         this.queue.enqueue(task);
     }
 

@@ -39,7 +39,7 @@ public class TestThreadPool {
     @Test
     public void testEmptyQueue() throws InterruptedException {
         for(Runnable t: tasks){
-            threadPool.submitTask(t);
+            threadPool.submitTask(t, 1);
         }
 
         Thread.sleep(1000);
@@ -50,7 +50,7 @@ public class TestThreadPool {
     @Test
     public void testNumberQueue() throws InterruptedException {
         for(Runnable t: tasks){
-            threadPool.submitTask(t);
+            threadPool.submitTask(t, 1);
         }
         Thread.sleep(1000);
         assertTrue(threadPool.threads.size()==2);
@@ -60,7 +60,7 @@ public class TestThreadPool {
     @Test
     public void testShutDown() throws InterruptedException {
         for(Runnable t: tasks){
-            threadPool.submitTask(t);
+            threadPool.submitTask(t, 1);
         }
         Thread.sleep(1000);
         threadPool.shutdown();
