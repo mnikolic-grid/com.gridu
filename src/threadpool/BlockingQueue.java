@@ -24,7 +24,6 @@ public class BlockingQueue<Type> {
     }
 
     public synchronized Type dequeue() throws InterruptedException {
-
         while(this.size() == EMPTY & !this.threadPool.isShutDown)
             wait();
         notify();
